@@ -50,7 +50,7 @@ const Card = styled.div`
   background: #fff;
   border-radius: 1rem;
   width: 64.9375rem;
-  margin: 10rem auto;
+  margin: 160px auto;
 `;
 
 const StyledUl = styled.ul`
