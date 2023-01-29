@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { v4 } from "uuid";
 import MealItem from "./meal-item/MealItem";
 
 const DUMMY_MEALS = [

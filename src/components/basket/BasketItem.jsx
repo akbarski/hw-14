@@ -31,6 +31,10 @@ export default BasketItem;
 const Container = styled.div`
   padding: 24px 0;
   width: 100%;
+  border-bottom: 1px solid #d6d6d6;
+  :last-child {
+    border: none;
+  }
 `;
 
 const Title = styled.p`
