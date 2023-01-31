@@ -11,7 +11,7 @@ const TotalAmount = ({ price, onCLose, onOrder }) => {
   return (
     <Container>
       <InfoContainer>
-        <Label>Total amont</Label>
+        <Label>Total amount</Label>
         <Price>${fixedPrice}</Price>
       </InfoContainer>
 
@@ -57,5 +57,4 @@ const ActionButtonsContainer = styled.div`
 
 const Container = styled.div`
   margin: 30px 0 0 0;
-    
-`
+`;

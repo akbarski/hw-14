@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Button from "../UI/Button";
 import { ReactComponent as PlusIcon } from "../../assets/icons/plus-icon.svg";
 import { ReactComponent as MinusIcon } from "../../assets/icons/minus-icon.svg";
+import { BasketContext } from "../../store/BasketContext";
 
-const BasketItem = ({ title, price, amount }) => {
+const BasketItem = ({ title, price, amount, decrementAmount, incrementAmount }) => {
+
   return (
     <Container>
       <Title>{title}</Title>
@@ -14,10 +16,18 @@ const BasketItem = ({ title, price, amount }) => {
           <Amount>x{amount}</Amount>
         </PriceAndAmountContainer>
         <CounterContainer>
-          <Button borderStyle="squared" variant="outlined">
+          <Button
+            borderStyle="squared"
+            variant="outlined"
+            onClick={decrementAmount}
+          >
             <MinusIcon />
           </Button>
-          <Button borderStyle="squared" variant="outlined">
+          <Button
+            borderStyle="squared"
+            variant="outlined"
+            onClick={incrementAmount}
+          >
             <PlusIcon />
           </Button>
         </CounterContainer>
