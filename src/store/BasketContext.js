@@ -7,7 +7,6 @@ export const BasketContext = createContext({
 
 export const BasketProvider = ({ children }) => {
   const [items, setItems] = useState([]);
-
   const updateBasketItem = async ({ id, amount }) => {
     try {
       const { data } = await fetchAPI(`basketItem/${id}/update`, {
@@ -60,7 +59,7 @@ export const BasketProvider = ({ children }) => {
     items,
     addToBasket,
     updateBasketItem,
-    deleteBasketItem
+    deleteBasketItem,
   };
   return (
     <BasketContext.Provider value={state}>{children}</BasketContext.Provider>

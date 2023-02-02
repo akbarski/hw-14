@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import styled from "styled-components";
 import "./App.css";
 import Basket from "./components/basket/Basket";
@@ -7,29 +7,12 @@ import Meals from "./components/meals/Meals";
 import Summary from "./components/summary/Summary";
 import { BasketProvider } from "./store/BasketContext";
 
-// GET /foods
-// Headers: { UserID: "your_name"  }
-
-// GET /basket
-// Headers: { UserID: "your_name"  }
-// POST /foods/:foodId/addToBasket
-
-// BODY: { amount: number }
-// Headers: { UserID: "your_name"  }
-
-// DELETE /basketItem/:id/delete
-// Headers: { UserID: "your_name"  }
-// PUT /basketItem/:id/update
-
-// BODY: { amount: number }
-// Headers: { UserID: "your_name"  }
-
 function App() {
   const [isBasketVisible, setBasketVisible] = useState(false);
 
-  const showBasketHandler = () => {
+  const showBasketHandler = useCallback(() => {
     setBasketVisible((prevState) => !prevState);
-  };
+  }, []);
 
   return (
     <BasketProvider>

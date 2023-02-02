@@ -14,7 +14,7 @@ const MealItemForm = ({ id, title, price }) => {
     setAmount(e.target.value);
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = (e) => {  
     e.preventDefault();
 
     const basketItem = {
