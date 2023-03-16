@@ -5,7 +5,7 @@ export const fetchAPI = async (path, options = {}) => {
   try {
     const requestOptions = {
       method: options.method || "GET",
-      headers: { UserID: "aziat", "Content-Type": "application/json" },
+      headers: { UserID: "Akparali", "Content-Type": "application/json" },
     };
     if (requestOptions.method !== "GET") {
       requestOptions.body = JSON.stringify(options.body);
